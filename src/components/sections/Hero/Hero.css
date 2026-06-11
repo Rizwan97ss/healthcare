@@ -1,0 +1,412 @@
+.hero {
+  padding-inline: 18px;
+  background-color: var(--gray-700);
+}
+
+.hero__wrapper {
+  position: relative;
+  max-width: 1404px;
+  height: 715px;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.hero__picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+
+.hero__content-card {
+  position: absolute;
+  top: 71px;
+  left: 68px;
+  z-index: 2;
+
+  width: 572px;
+  height: 463px;
+  padding: 56px;
+
+  background-color: var(--gray-800);
+  border-radius: 32px;
+}
+
+.hero__content-inner {
+  width: 460px;
+}
+
+.hero__title {
+  width: 460px;
+  min-height: 168px;
+  margin-bottom: 16px;
+  color: var(--gray-100);
+}
+
+.hero__text {
+  width: 460px;
+  min-height: 72px;
+  margin-bottom: 40px;
+  color: var(--gray-200);
+}
+
+.hero__button {
+  width: 216px;
+  height: 55px;
+  padding: 14px 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background-color: var(--gray-100);
+  color: var(--gray-800);
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero__button:hover {
+  background-color: var(----color-primary);
+  color: var(--gray-100);
+}
+
+/* Badges */
+
+.hero__badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero__badge-top {
+  top: 56px;
+  left: 723px;
+  width: 143px;
+  height: 32px;
+}
+
+.hero__badge-bottom {
+  right: 52px;
+  bottom: 88px;
+}
+
+.hero__badge-icon {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--gray-800);
+  border-radius: 50%;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero__badge-icon img {
+  width: 19px;
+  height: 19px;
+}
+
+.hero__badge-pill {
+  width: 115px;
+  height: 32px;
+  margin-left: -4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--gray-800);
+  border-radius: 999px;
+}
+
+.hero__badge-label {
+  font-family: var(--body-font);
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 500;
+  color: var(--gray-100);
+  white-space: nowrap;
+}
+
+/* Brain */
+
+.hero__brain {
+  position: absolute;
+  top: 310px;
+  right: 84px;
+  z-index: 2;
+
+  width: 66px;
+  height: 66px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--gray-800);
+  border-radius: 50%;
+}
+
+.hero__brain img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Stats */
+
+.hero__stats {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+
+  width: 495px;
+  height: 114px;
+  padding-inline: 48px;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  background-color: var(--gray-800);
+  border-top-right-radius: 32px;
+}
+
+.hero__stats-number {
+  width: 90px;
+  height: 60px;
+
+  font-family: var(--heading-font);
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: var(--h2-weight);
+
+  color: var(--gray-100);
+}
+
+.hero__stats-text {
+  width: 204px;
+  height: 54px;
+  color: var(--gray-100);
+}
+
+/* Laptop */
+
+@media (max-width: 1199px) {
+  .hero__wrapper {
+    height: 620px;
+  }
+
+  .hero__content-card {
+    width: 500px;
+    height: auto;
+    padding: 44px;
+  }
+
+  .hero__content-inner,
+  .hero__title,
+  .hero__text {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .hero__wrapper {
+    height: 600px;
+  }
+
+  .hero__content-card {
+    width: 440px;
+    padding: 36px;
+  }
+
+  .hero__badge-top,
+  .hero__badge-bottom,
+  .hero__brain {
+    display: none;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575px) {
+  .hero {
+    padding-inline: 16px;
+  }
+
+  .hero__wrapper {
+    width: 343px;
+    height: auto;
+    overflow: visible;
+    border-radius: 0;
+  }
+
+  .hero__picture {
+    position: relative;
+    display: block;
+    width: 343px;
+    height: 314px;
+  }
+
+  .hero__image {
+    width: 343px;
+    height: 314px;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+
+  .hero__badge-top {
+    display: flex;
+    top: 37px;
+    left: 21px;
+    width: 86px;
+    height: 18px;
+  }
+
+  .hero__badge-bottom {
+    display: flex;
+    top: 279px;
+    left: 250px;
+    right: auto;
+    bottom: auto;
+    width: 81px;
+    height: 18px;
+  }
+
+  .hero__badge-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+  }
+
+  .hero__badge-icon img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .hero__badge-pill {
+    width: auto;
+    height: 18px;
+    padding-inline: 8px;
+    margin-left: -2px;
+  }
+
+  .hero__badge-label {
+    font-size: 8px;
+    line-height: normal;
+  }
+
+  .hero__brain {
+    display: flex;
+    top: 114px;
+    left: 277px;
+    right: auto;
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero__brain img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero__content-card {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    width: 343px;
+    height: auto;
+    padding: 0;
+    margin-top: 32px;
+
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .hero__content-inner {
+    width: 343px;
+  }
+
+  .hero__title {
+    width: 343px;
+    min-height: auto;
+    margin-bottom: 16px;
+
+    font-size: var(--m-h1-size);
+    line-height: var(--m-h1-line);
+    font-weight: var(--m-h1-weight);
+  }
+
+  .hero__text {
+    width: 343px;
+    min-height: auto;
+    margin-bottom: 24px;
+  }
+
+  .hero__button {
+    width: 216px;
+    height: 51px;
+    padding: 12px 32px;
+
+    font-size: var(--button-lg-size);
+    line-height: var(--button-lg-line);
+    /* font-weight: var(--button-lg-weight); */
+  }
+
+  .hero__stats {
+    position: relative;
+    left: auto;
+    bottom: auto;
+
+    width: 307px;
+    height: 48px;
+    padding: 0;
+    margin-top: 32px;
+
+    gap: 23px;
+
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .hero__stats-number {
+    width: 54px;
+    height: 36px;
+
+    font-size: var(--m-h5-size);
+    line-height: 36px;
+    font-weight: var(--m-h5-weight);
+  }
+
+  .hero__stats-text {
+    width: 230px;
+    height: 48px;
+  }
+
+  .hero__button:hover {
+  background-color: var(----color-primary);
+  color: var(--gray-100);
+}
+}

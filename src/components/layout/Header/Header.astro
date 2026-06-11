@@ -1,0 +1,71 @@
+---
+import "./Header.css";
+import { Image } from "astro:assets";
+import logo from "../../../assets/images/logo.png";
+
+const navigation = [
+  { title: "Services", href: "/services" },
+  { title: "Team", href: "/team" },
+  { title: "Appointment", href: "/appointment" },
+  { title: "About Us", href: "/about" },
+  { title: "Pricing", href: "/pricing" },
+  { title: "Blogs", href: "/blog" },
+  { title: "Contact", href: "/contact" },
+];
+---
+
+<header class="header">
+  <div class="header__container">
+    <a href="/" class="header__logo" aria-label="HopeBloom Home">
+      <Image
+        src={logo}
+        alt="HopeBloom Logo"
+        width={210}
+        height={25}
+      />
+    </a>
+
+    <nav class="header__nav" aria-label="Desktop navigation">
+      {
+        navigation.map((item) => (
+          <a href={item.href} class="header__link body-md">
+            {item.title}
+          </a>
+        ))
+      }
+    </nav>
+
+    <button
+      class="header__toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="header__mobile-nav" aria-label="Mobile navigation" data-mobile-menu>
+    {
+      navigation.map((item) => (
+        <a href={item.href} class="header__mobile-link body-md-semibold">
+          {item.title}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector("[data-menu-toggle]");
+  const menu = document.querySelector("[data-mobile-menu]");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = menu?.classList.toggle("is-open") ?? false;
+
+    toggle.classList.toggle("is-open", isOpen);
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>

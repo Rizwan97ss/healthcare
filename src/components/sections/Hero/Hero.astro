@@ -1,0 +1,86 @@
+---
+import "./Hero.css";
+
+import heroImage from "../../../assets/images/Hero.jpg";
+import heroMobileImage from "../../../assets/images/heromob.png";
+
+import plusIcon from "../../../assets/images/plus.svg";
+import brainIcon from "../../../assets/images/brain.svg";
+---
+
+<section class="hero">
+  <div class="hero__wrapper">
+    <picture class="hero__picture">
+      <source
+        media="(max-width: 575px)"
+        srcset={heroMobileImage.src}
+      />
+
+      <img
+        src={heroImage.src}
+        alt="Mental Wellness"
+        class="hero__image"
+      />
+    </picture>
+
+    <div class="hero__content-card">
+      <div class="hero__content-inner">
+        <h1 class="hero__title h2">
+          Your Safe Space
+          <br />
+          For Mental Health
+        </h1>
+
+        <p class="hero__text body-md">
+          Prioritize your mental well-being and create a life filled with peace,
+          purpose, and positivity. Let us guide you on your journey to a
+          healthier mind.
+        </p>
+
+        <a href="/appointment" class="hero__button body-lg">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__badge hero__badge-top">
+      <div class="hero__badge-icon">
+        <img src={plusIcon.src} alt="" />
+      </div>
+
+      <div class="hero__badge-pill">
+        <span class="hero__badge-label">
+          Mind Wellness
+        </span>
+      </div>
+    </div>
+
+    <div class="hero__badge hero__badge-bottom">
+      <div class="hero__badge-icon">
+        <img src={plusIcon.src} alt="" />
+      </div>
+
+      <div class="hero__badge-pill">
+        <span class="hero__badge-label">
+          Healthy Form
+        </span>
+      </div>
+    </div>
+
+    <div class="hero__brain">
+      <img src={brainIcon.src} alt="" />
+    </div>
+
+    <div class="hero__stats">
+      <div class="hero__stats-number">
+        58k+
+      </div>
+
+      <p class="hero__stats-text body-md">
+        Millions of Happy Patients,
+        <br />
+        One Goal: Wellness
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Urbanist:wght@100..900&display=swap');
+:root {
+
+    /* Primary */
+----color-primary: #B6DFF9;
+--color-primary-light: #DAF0FF;
+--color-primary-soft: #F5F8FA;
+
+  /* Grayscale */
+  --gray-100:#161A1E;
+  --gray-200:#737678;
+  --gray-300:#A2A3A5;
+  --gray-400:#B9BABC;
+  --gray-500:#E8E8E9;
+  --gray-600:#F4F4F4;
+  --gray-700:#F8F8F8;
+  --gray-800:#FFFFFF;
+
+  /* Message  & Error*/
+  --message:#138943;
+  --error:#DC2626;
+
+  /* Section colors */
+  --section-1:#B0E3E4;
+  --section-2:#B4CEFF;
+  --section-3:#C4B4FF;
+  --section-4:#C8E4F6;
+  --section-5:#E5ECBE;
+
+  /* Heading font */
+--heading-font: "Urbanist", sans-serif;
+--body-font: "Inter Tight", sans-serif;
+
+/* Typography */
+
+--h1-size: 70px;
+--h1-line: 105px;
+--h1-weight: 700;
+
+--h2-size: 56px;
+--h2-line: 84px;
+--h2-weight: 700;
+
+--h3-size: 44px;
+--h3-line: 66px;
+--h3-weight: 700;
+
+--h4-size: 32px;
+--h4-line: 48px;
+--h4-weight: 700;
+
+--h5-size: 24px;
+--h5-line: 36px;
+--h5-weight: 700;
+
+--h6-size: 20px;
+--h6-line: 30px;
+--h6-weight: 700;
+
+--subtitle-size: 22px;
+--subtitle-line: 33px;
+--subtitle-weight: 600;
+
+--body-lg-size: 18px;
+--body-lg-line: 27px;
+--body-lg-weight: 400;
+
+--body-md-size: 16px;
+--body-md-line: 24px;
+--body-md-weight: normal;
+
+--body-sm-size: 14px;
+--body-sm-line: 21px;
+--body-sm-weight: 400;
+
+--body-xs-size: 12px;
+--body-xs-line: 18px;
+--body-xs-weight: 400;
+
+--button-lg-size: 16px;
+--button-lg-line: 24px;
+--button-lg-weight: 700;
+
+--button-md-size: 14px;
+--button-md-line: 21px;
+--button-md-weight: 600;
+
+/* Optional Semibold Variants */
+
+--body-lg-semibold-weight: 600;
+--body-md-semibold-weight: 600;
+
+/* Mobile Typography */
+
+--m-h1-size: 34px;
+--m-h1-line: 51px;
+--m-h1-weight: 700;
+
+--m-h2-size: 28px;
+--m-h2-line: 42px;
+--m-h2-weight: 700;
+
+--m-h3-size: 24px;
+--m-h3-line: 36px;
+--m-h3-weight: 700;
+
+--m-h4-size: 20px;
+--m-h4-line: 30px;
+--m-h4-weight: 700;
+
+--m-h5-size: 18px;
+--m-h5-line: 27px;
+--m-h5-weight: 700;
+
+--m-h6-size: 16px;
+--m-h6-line: 24px;
+--m-h6-weight: 700;
+
+--m-subtitle-size: 20px;
+--m-subtitle-line: 30px;
+--m-subtitle-weight: 600;
+
+--m-body-lg-size: 18px;
+--m-body-lg-line: 27px;
+--m-body-lg-weight: 400;
+
+--m-body-md-size: 16px;
+--m-body-md-line: 24px;
+--m-body-md-weight: 400;
+
+--m-body-sm-size: 14px;
+--m-body-sm-line: 21px;
+--m-body-sm-weight: 400;
+
+--m-body-xs-size: 12px;
+--m-body-xs-line: 18px;
+--m-body-xs-weight: 400;
+
+--m-button-lg-size: 16px;
+--m-button-lg-line: 24px;
+--m-button-lg-weight: 700;
+
+--m-button-md-size: 14px;
+--m-button-md-line: 21px;
+--m-button-md-weight: 600;
+}

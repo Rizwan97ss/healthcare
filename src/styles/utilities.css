@@ -1,0 +1,12 @@
+.container {
+  width: min(
+    var(--container-width),
+    calc(100% - (var(--container-padding) * 2))
+  );
+
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 120px;
+}
