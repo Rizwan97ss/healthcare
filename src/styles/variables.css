@@ -2,7 +2,7 @@
 :root {
 
     /* Primary */
-----color-primary: #B6DFF9;
+--color-primary: #B6DFF9;
 --color-primary-light: #DAF0FF;
 --color-primary-soft: #F5F8FA;
 
@@ -57,6 +57,7 @@
 --h6-line: 30px;
 --h6-weight: 700;
 
+
 --subtitle-size: 22px;
 --subtitle-line: 33px;
 --subtitle-weight: 600;
@@ -77,9 +78,9 @@
 --body-xs-line: 18px;
 --body-xs-weight: 400;
 
---button-lg-size: 16px;
---button-lg-line: 24px;
---button-lg-weight: 700;
+--button-lg-size: 18px;
+--button-lg-line: 27px;
+--button-lg-weight: 600;
 
 --button-md-size: 14px;
 --button-md-line: 21px;
@@ -136,8 +137,8 @@
 --m-body-xs-line: 18px;
 --m-body-xs-weight: 400;
 
---m-button-lg-size: 16px;
---m-button-lg-line: 24px;
+--m-button-lg-size: 18px;
+--m-button-lg-line: 27px;
 --m-button-lg-weight: 700;
 
 --m-button-md-size: 14px;

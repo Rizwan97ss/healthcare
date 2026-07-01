@@ -1,0 +1,70 @@
+.ser-main{
+    background-color: var(--color-primary-soft);
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-bottom:80px;
+    padding-top: 80px;
+    padding-left: 117px;
+    padding-right: 117px;
+    width: 1404px;
+    height: 830px;
+    border-radius: 32px;
+}
+.ser-main .first-row{
+    display: flex;
+    justify-content: center;
+}
+.ser-main .ser-header{
+   text-align: center;
+    width: 556px;
+    height: 100px;
+}
+.ser-main .images > div {
+    position: relative;
+}
+.ser-main .images{
+    display: flex;
+    width: 1170px;
+    height: 419px;
+    gap: 30px;
+}
+.ser-main .images p{
+    color: var(--gray-800);
+    width: 210px;
+    height: 36px;
+    position: absolute;
+    top: 359px;
+    left: 24px;
+    z-index: 99;
+}
+.ser-main .images span{
+    position: absolute;
+     top: 363px;
+    left: 314px;
+    width: 56px;
+    height: 56px;
+    background-color: var(--color-primary);
+    z-index: 99;
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ser-main .button{
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+.ser-main .button button{
+        padding: 14px 32px;
+        border: 1px solid var(--gray-100);
+        background-color: var(--color-primary-soft);
+        border-radius: 999px;
+}
+.ser-main .button button:hover{
+        padding: 14px 32px;
+        background-color: var(--gray-100);
+        color: var(--gray-800);
+        border-radius: 999px;
+}

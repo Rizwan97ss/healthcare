@@ -5,7 +5,7 @@
 
 .hero__wrapper {
   position: relative;
-  max-width: 1404px;
+  /* max-width: 1404px; */
   height: 715px;
   margin-inline: auto;
   overflow: hidden;
@@ -44,7 +44,14 @@
 .hero__content-inner {
   width: 460px;
 }
-
+.hero__content-inner img{
+  position: relative;
+  margin-left: 400px;
+  margin-top: -15px;
+  /* z-index: 1; */
+  width: 116.12px;
+  height: 65.4px;
+}
 .hero__title {
   width: 460px;
   min-height: 168px;
@@ -79,7 +86,7 @@
 }
 
 .hero__button:hover {
-  background-color: var(----color-primary);
+  background-color: var(--color-primary);
   color: var(--gray-100);
 }
 

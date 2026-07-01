@@ -1,0 +1,45 @@
+---
+import "./service.css";
+import { ArrowRight } from "@lucide/astro";
+import sercard1 from "../../../assets/images/ser1.png";
+import sercard2 from "../../../assets/images/ser2.png";
+import sercard3 from "../../../assets/images/ser3.png";
+---
+
+<section class="ser-main">
+    <div class="first-row">
+        <div class="ser-header">
+            <p class="hd2">Your Needs, Our Services</p>
+            <p class="body-md">
+                Taking care of your mental well-being is essential to living a
+                balanced, fullfilling life
+            </p>
+        </div>
+    </div>
+    <div class="images">
+        <div>
+            <img src={sercard1.src} alt="" />
+            <p class="h5">Managing Anxiety</p>
+            <span>
+                <ArrowRight size={24} stroke-width={2} />
+            </span>
+        </div>
+        <div>
+            <img src={sercard2.src} alt="" />
+            <p class="h5">Coping With Stress</p>
+            <span>
+                <ArrowRight size={24} stroke-width={2} />
+            </span>
+        </div>
+        <div>
+            <img src={sercard3.src} alt="" />
+            <p class="h5">Building Resilience</p>
+            <span>
+                <ArrowRight size={24} stroke-width={2} />
+            </span>
+        </div>
+    </div>
+    <div class="button">
+        <button class="button-lg">View All Services</button>
+    </div>
+</section>

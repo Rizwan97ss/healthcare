@@ -1,0 +1,71 @@
+.section6 {
+    padding: 80px 135px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    align-items: center;
+}
+
+.section6 .section6-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.section6 .logo {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.section6 .hd2 {
+    margin: 0 0 16px;
+}
+
+.section6 .section6-left > .body-md {
+    margin: 0;
+}
+
+.section6 .btn6 {
+    margin-top: 40px;
+}
+
+.section6 .btn6 button {
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+}
+
+.section6 .btn6 button:hover {
+    background-color: var(--color-primary);
+    color: var(--gray-100);
+}
+
+.section6 .section6-right {
+    display: grid;
+    gap: 40px;
+}
+
+.section6 .step {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 24px;
+}
+
+.section6 .step-num {
+    color: var(--color-primary);
+}
+
+.section6 .step .hd3 {
+    margin: 0 0 16px;
+}
+
+.section6 .step .body-md {
+    margin: 0;
+}
