@@ -1,0 +1,89 @@
+---
+import "./Footer.css";
+import hopebloomwhite from "../../../assets/images/hopebloomwhite.png";
+import { Facebook, Instagram, Youtube, Twitter } from "lucide-astro";
+---
+
+<section class="footer">
+    <div class="footer-main">
+        <!-- Left -->
+        <div class="first">
+            <div class="top">
+                <img src={hopebloomwhite.src} alt="HopeBloom" />
+
+                <p class="body-md-light">
+                    We are dedicated to providing expert guidance, resources,
+                    and support for mental health and emotional wellness.
+                </p>
+            </div>
+
+            <div class="bottom">
+                <input
+                    type="email"
+                    placeholder="Email"
+                    aria-label="Email Address"
+                />
+
+                <button class="button-lg"> Subscribe </button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="second body-md">
+            <a href="/">Home</a>
+
+            <a href="/services">Services</a>
+
+            <a href="/about">About</a>
+
+            <a href="/pricing">Pricing</a>
+
+            <a href="/blog">Blog</a>
+
+            <a href="/contact">Contact</a>
+
+            <a href="/faq">FAQ's</a>
+        </div>
+
+        <!-- Social -->
+        <div class="third body-md">
+            <a href="#">
+                <Facebook size={22} />
+                <span>Facebook</span>
+            </a>
+
+            <a href="#">
+                <Instagram size={22} />
+                <span>Instagram</span>
+            </a>
+
+            <a href="#">
+                <Youtube size={22} />
+                <span>Youtube</span>
+            </a>
+
+            <a href="#">
+                <Twitter size={22} />
+                <span>Twitter</span>
+            </a>
+        </div>
+    </div>
+
+  <div class="footer-bottom">
+    <div class="line"></div>
+
+    <div class="bottom body-sm">
+        <div>
+            Copyright © 2024 HopeBloom. All Rights Reserved.
+        </div>
+
+        <div>
+            <a href="/privacy-policy">Privacy Policy</a>
+
+            <span class="divider"></span>
+
+            <a href="/terms-of-service">Terms of Service</a>
+        </div>
+    </div>
+</div>
+</section>

@@ -1,0 +1,37 @@
+.section8{
+      padding: 80px 135px;
+      display: grid;
+      grid-template-rows: auto auto auto;
+      gap: 48px;
+}
+.section8 .section8-header{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 122px;
+    align-items: center;
+}
+
+.section8 .section8-main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+.section8 .section8-main .body-md{
+    color: var(--gray-200);
+}
+.section8 .section8-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.section8 .section8-buttons button{
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+.section8 .section8-buttons button:hover{
+    color: var(--gray-800);
+    background-color: var(--gray-100);
+}

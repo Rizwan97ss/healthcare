@@ -1,0 +1,235 @@
+.footer{
+    padding: 80px 117px 32px 117px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    border-radius: 32px;
+    background-color: var(--gray-100);
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 80px;
+}
+
+.footer-main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 224px;
+    align-items: start;
+}
+.footer-main .first{
+        display: grid;
+    grid-template-rows: auto auto;
+    gap: 40px;
+}
+
+.footer-main .first .top{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+.footer-main .bottom{
+        display: grid;
+    grid-template-columns: auto auto;
+    gap: auto;
+    align-items: center;
+}
+.footer-main .bottom input{
+    padding-left:20px ;
+    padding-right: 20px;
+    width: 407px;
+    height: 55px;
+    border-radius: 40px;
+    border: 1px solid var(--color-primary);
+    color: var(--gray-300);
+        background: rgba(255, 255, 255, 0.04); /* White at 4% opacity */
+    outline: none;
+      font-family: var(--body-font);
+}
+.footer-main .bottom button{
+    padding: 14px 32px;
+    background-color: var(--color-primary);
+    color: var(--gray-100);
+    border-radius: 999px;
+    border: none;
+}
+.footer-main .bottom button:hover{
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+}
+
+/* ========= SECOND COLUMN ========= */
+
+.footer-main .second {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.footer-main .second a {
+    color: var(--gray-800);
+}
+
+
+
+/* ========= THIRD COLUMN ========= */
+
+.footer-main .third {
+    display: grid;
+        grid-template-rows: auto;
+    gap: 20px;
+}
+
+.footer-main .third a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-800);
+
+}
+
+
+
+.footer-main .third a svg {
+    width: 12.46x;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+
+/* ========= DIVIDER ========= */
+
+/* .footer hr {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background: rgba(255,255,255,.08);
+    margin: 0;
+} */
+
+
+/* ========= FOOTER BOTTOM ========= */
+.footer-bottom{
+    display: grid;
+    gap: 32px;
+}
+
+.footer-bottom .line{
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,.12);
+    border-radius: 999px;
+}
+
+.footer-bottom .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--gray-400);
+}
+
+.footer-bottom .bottom > div:last-child{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-bottom .bottom a{
+    color: var(--gray-400);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-bottom .bottom a:hover{
+    color: var(--color-primary);
+}
+
+.footer-bottom .divider{
+    width: 1px;
+    height: 18px;
+    background: rgba(255,255,255,.18);
+}
+
+
+/* ========= RESPONSIVE ========= */
+
+@media (max-width:1200px){
+
+    .footer{
+        padding:70px 60px 30px;
+    }
+
+    .footer-main{
+        gap:80px;
+    }
+
+    .footer-main .bottom input{
+        width:320px;
+    }
+
+}
+
+@media (max-width:992px){
+
+    .footer{
+        padding:60px 40px 30px;
+        gap:60px;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+        gap:50px;
+    }
+
+    .footer-main .first{
+        grid-column:1 / -1;
+    }
+
+    .footer-main .bottom{
+        grid-template-columns:1fr auto;
+        gap:16px;
+    }
+
+    .footer-main .bottom input{
+        width:100%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .footer{
+        margin:16px;
+        padding:48px 24px 24px;
+        border-radius:24px;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .footer-main .bottom{
+        grid-template-columns:1fr;
+    }
+
+    .footer-main .bottom button{
+        width:100%;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:24px;
+    }
+
+    .footer-bottom .links{
+        flex-wrap:wrap;
+        gap:18px;
+    }
+
+    .footer-bottom .divider{
+        display:none;
+    }
+
+}

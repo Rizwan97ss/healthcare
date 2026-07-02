@@ -1,0 +1,36 @@
+.section10{
+    padding:80px 117px;
+}
+
+.section10-card{
+    padding: 80px;
+    display:grid;
+    grid-template-columns:auto auto;
+    align-items:start;
+    gap: 98px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:100% 100%;
+
+    border-radius:32px;
+}
+
+
+.section10 .section10-card .section10-right{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 40px;
+}
+
+.section10 .section10-card .section10-right .button-lg{
+    border: none;
+  padding: 14px 32px;
+    border-radius: 999px;
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+}
+
+.section10 .section10-card .section10-right .button-lg:hover{
+        color: var(--gray-100);
+    background-color: var(--color-primary);
+}

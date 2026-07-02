@@ -107,7 +107,13 @@
   line-height: var(--body-md-line);
   font-weight: var(--body-md-weight);
 }
-
+.body-md-light {
+  font-family: var(--body-font);
+  font-size: var(--body-md-size);
+  line-height: var(--body-md-line);
+  font-weight: var(--body-md-weight);
+  color: var(--gray-800);
+}
 .body-md-semibold {
   font-family: var(--body-font);
   font-size: var(--body-md-size);
