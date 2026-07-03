@@ -2,87 +2,60 @@
 import "./Hero.css";
 
 import heroImage from "../../../assets/images/Hero.jpg";
-import heroMobileImage from "../../../assets/images/heromob.png";
-
 import plusIcon from "../../../assets/images/plus.svg";
 import brainIcon from "../../../assets/images/brain.svg";
-import vector1 from "../../../assets/images/vector1.svg"
+import vector1 from "../../../assets/images/vector1.svg";
 ---
 
-<section class="hero">
-  <div class="hero__wrapper">
-    <picture class="hero__picture">
-      <source
-        media="(max-width: 575px)"
-        srcset={heroMobileImage.src}
-      />
+<section
+  class="hero"
+  style={`background-image: url(${heroImage.src});`}
+>
+  <div class="hero-card">
+    <div class="hero-card__content">
+      <h1 class="h2">
+        Your Safe Space <br />
+        For Mental Health
+      </h1>
 
-      <img
-        src={heroImage.src}
-        alt="Mental Wellness"
-        class="hero__image"
-      />
-    </picture>
-
-    <div class="hero__content-card">
-      <div class="hero__content-inner">
-        <h1 class="hero__title h2">
-          Your Safe Space
-          <br />
-          For Mental Health
-        </h1>
-
-        <p class="hero__text body-md">
-          Prioritize your mental well-being and create a life filled with peace,
-          purpose, and positivity. Let us guide you on your journey to a
-          healthier mind.
-        </p>
-
-        <a href="/appointment" class="hero__button body-lg">
-          Book Appointment
-        </a>
-        <img src={vector1.src} alt="" />
-      </div>
-    </div>
-
-    <div class="hero__badge hero__badge-top">
-      <div class="hero__badge-icon">
-        <img src={plusIcon.src} alt="" />
-      </div>
-
-      <div class="hero__badge-pill">
-        <span class="hero__badge-label">
-          Mind Wellness
-        </span>
-      </div>
-    </div>
-
-    <div class="hero__badge hero__badge-bottom">
-      <div class="hero__badge-icon">
-        <img src={plusIcon.src} alt="" />
-      </div>
-
-      <div class="hero__badge-pill">
-        <span class="hero__badge-label">
-          Healthy Form
-        </span>
-      </div>
-    </div>
-
-    <div class="hero__brain">
-      <img src={brainIcon.src} alt="" />
-    </div>
-
-    <div class="hero__stats">
-      <div class="hero__stats-number">
-        58k+
-      </div>
-
-      <p class="hero__stats-text body-md">
-        Millions of Happy Patients,
-        <br />
-        One Goal: Wellness
+      <p class="body-md">
+        Prioritize your mental well-being and create a life filled with peace,
+        purpose, and positivity. Let us guide you on your journey to a healthier
+        mind.
       </p>
+    </div>
+
+    <button class="hero-btn button-lg">
+      Book Appointment
+    </button>
+
+    <img src={vector1.src} alt="" class="hero-card__vector" />
+  </div>
+
+  <div class="hero-badge hero-badge--top">
+    <span class="hero-badge__icon">
+      <img src={plusIcon.src} alt="" />
+    </span>
+    <span class="inter-tight">Mind Wellness</span>
+  </div>
+
+  <div class="hero-brain">
+    <img src={brainIcon.src} alt="" />
+  </div>
+
+  <div class="hero-badge hero-badge--bottom">
+    <span class="hero-badge__icon">
+      <img src={plusIcon.src} alt="" />
+    </span>
+    <span class="inter-tight">Healthy Form</span>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hd2">58k+
+    </div>
+    <div class="body-lg">
+      Millions of Happy Patients,<br/>
+      One Goal: Wellness
     </div>
   </div>
 </section>
