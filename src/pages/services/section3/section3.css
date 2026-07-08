@@ -1,0 +1,265 @@
+.ser-section3 {
+padding: 40px 135px 80px 135px;
+}
+
+.ser-section3 .hd2 {
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--gray-100);
+}
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.care-card {
+  overflow: hidden;
+  border: 1px solid var(--gray-500);
+  border-radius: 24px;
+  background: var(--color-primary-soft);
+  box-shadow: 0 4px 0 rgba(22, 26, 30, 0.16);
+}
+
+.care-card.wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 16px;
+}
+
+.care-card.vertical {
+  min-height: 590px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 32px;
+}
+
+.care-card.feature {
+  grid-column: 1 / -1;
+  min-height: 374px;
+  position: relative;
+  padding: 16px;
+  background: var(--gray-100);
+}
+
+.care-content {
+  padding: 40px;
+}
+
+.care-card.wide .care-content {
+  padding: 40px;
+}
+
+.care-card.vertical .care-content {
+  padding: 24px;
+}
+
+.care-card.vertical.text-top .care-content {
+  order: 1;
+}
+
+.care-card.vertical.text-top .care-image {
+  order: 2;
+}
+
+.care-card.vertical.image-top .care-image {
+  order: 1;
+}
+
+.care-card.vertical.image-top .care-content {
+  order: 2;
+}
+
+.care-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.care-tags span {
+  padding: 3px 10px;
+  border: 1px solid var(--gray-500);
+  border-radius: 999px;
+  background: var(--gray-800);
+  color: var(--gray-100);
+  font-family: var(--body-font);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.care-content h3 {
+  margin: 0 0 16px;
+  color: var(--gray-100);
+}
+
+.care-content p {
+  max-width: 430px;
+  margin: 0 0 24px;
+  color: var(--gray-100);
+}
+
+.care-btn {
+
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--gray-100);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.care-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-800);
+}
+
+.care-image {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.care-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.care-card.vertical .care-image img {
+  min-height: 290px;
+}
+
+.care-card.image-left .care-image {
+  order: 1;
+}
+
+.care-card.image-left .care-content {
+  order: 2;
+}
+
+.care-card.image-right .care-content {
+  order: 1;
+}
+
+.care-card.image-right .care-image {
+  order: 2;
+}
+
+.care-card.feature .care-image {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+}
+
+.care-card.feature .care-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.care-card.feature .care-content {
+  position: relative;
+  z-index: 2;
+  width: 48%;
+  margin-left: auto;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 24px;
+  background: var(--gray-800);
+}
+
+.care-card.feature .care-content p {
+  max-width: 420px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .ser-section3 {
+    padding: 60px 32px;
+  }
+
+  .care-card.wide {
+    grid-template-columns: 1fr;
+  }
+
+  .care-card.feature .care-content {
+    width: 60%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .ser-section3 {
+    padding: 40px 16px;
+  }
+
+  .ser-section3 .hd2 {
+    margin-bottom: 32px;
+  }
+
+  .care-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .care-card,
+  .care-card.wide,
+  .care-card.vertical,
+  .care-card.feature {
+    grid-column: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .care-card.feature {
+    background: var(--color-primary-soft);
+  }
+
+  .care-card.feature .care-image {
+    position: relative;
+    inset: auto;
+    order: 1;
+  }
+
+  .care-card.feature .care-content {
+    order: 2;
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 24px;
+    background: transparent;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .care-content,
+  .care-card.wide .care-content,
+  .care-card.vertical .care-content {
+    padding: 20px;
+  }
+
+  .care-image img,
+  .care-card.vertical .care-image img {
+    min-height: 220px;
+  }
+
+  .care-tags {
+    margin-bottom: 18px;
+  }
+}

@@ -1,0 +1,23 @@
+.ser-section2{
+    padding: 80px 135px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+
+.ser-section2 .ser-sec-right{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 57px;
+}
+
+.ser-section2 .ser-sec-right .text{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 16px;
+    justify-content: center;
+        text-align: left;
+}
+.ser-section2 .ser-sec-right .image{
+    border-radius: 32px;
+}

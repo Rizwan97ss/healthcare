@@ -1,0 +1,98 @@
+---
+import ServiceDetails from "../../pages/services/section4/serviceDetails.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Section5 from "./section5/section5.astro";
+import Section6 from "./section6/section6.astro";
+
+import Footer from "../../components/layout/Footer/Footer.astro";
+
+interface Service {
+  title: string;
+  subtitle: string;
+  heading: string;
+  tags: string[];
+}
+
+export function getStaticPaths() {
+  const services: Record<string, Service> = {
+    "managing-anxiety": {
+      title: "Managing Anxiety",
+      subtitle:
+        "Our goal is to equip you with practical tools to reduce stress, regain control, and improve your overall well-being.",
+      tags: ["Obsessive", "Phobias", "Separation"],
+      heading: "What is Anxiety?",
+    },
+
+    "coping-with-stress": {
+      title: "Coping with Stress",
+      subtitle:
+        "Different coping mechanisms help individuals handle stress and improve emotional well-being.",
+      tags: ["Avoidance", "Mindfulness", "Behavioral"],
+      heading: "What is Stress?",
+    },
+
+    "building-resilience": {
+      title: "Building Resilience",
+      subtitle:
+        "Build emotional strength, self-awareness, and adaptability for daily challenges.",
+      tags: ["Emotional Regulation", "Self-Awareness", "Adaptability"],
+      heading: "What is Resilience?",
+    },
+
+    depression: {
+      title: "Depression",
+      subtitle:
+        "Understand depression and learn healthy ways to manage emotions and daily life.",
+      tags: ["Bipolar Disorder", "Dysphoric", "Psychotic"],
+      heading: "What is Depression?",
+    },
+
+    "personality-disorder": {
+      title: "Personality Disorder",
+      subtitle:
+        "Learn how personality patterns affect thoughts, emotions, and relationships.",
+      tags: ["Borderline", "Narcissistic", "Antisocial"],
+      heading: "What is Personality Disorder?",
+    },
+
+    "eating-disorder": {
+      title: "Eating Disorder",
+      subtitle:
+        "Support for unhealthy eating habits, distorted body image, and emotional struggles.",
+      tags: ["Anorexia Nervosa", "Bulimia Nervosa", "Binge Eating"],
+      heading: "What is Eating Disorder?",
+    },
+
+    "relationship-difficulties": {
+      title: "Relationship Difficulties",
+      subtitle:
+        "Improve communication, emotional awareness, and mutual respect in relationships.",
+      tags: ["Behavior", "Disrespectful", "Mismatched"],
+      heading: "What are Relationship Difficulties?",
+    },
+
+    "grief-loss": {
+      title: "Grief & Loss",
+      subtitle:
+        "Support for healing through grief with time, care, and self-compassion.",
+      tags: ["Cry and Express", "Self-Compassion", "Grieving"],
+      heading: "What is Grief & Loss?",
+    },
+  };
+
+  return Object.entries(services).map(([slug, service]) => ({
+    params: { slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props as { service: Service };
+---
+<MainLayout title="HopeBloom">
+
+<ServiceDetails service={service} />
+<Section5 />
+<Section6 />
+<Footer />
+
+</MainLayout>

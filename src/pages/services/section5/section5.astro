@@ -1,0 +1,201 @@
+---
+import "./section5.css";
+import avatar1 from "../../../assets/images/carousel.png";
+import profile1 from "../../../assets/images/profile.png";
+import profile2 from "../../../assets/images/profile2.png";
+
+---
+
+<section class="ser-section8">
+  <div class="ser-section8-header">
+    <h2 class="hd2">Shared Experience Of Patients</h2>
+    <p class="body-md">
+     Every mental health journey is unique, yet sharing experience can inspire hope and healing.
+      <br />
+      in your life, empowering you to live fully and authentically.
+    </p>
+  </div>
+
+  <div class="ser-section8-carousel">
+    <div class="testimonial-viewport">
+      <div class="testimonial-track" id="testimonialTrack">
+        <article class="testimonial-card">
+          <p class="testimonial-text body-lg">
+            "I reached out to HopeBloom during a tough time, and it was the best
+            decision I made. I felt truly cared for, and the resources available
+            on the website helped me through my journey."
+          </p>
+
+          <div class="testimonial-user">
+            <img src={profile1.src} alt="Sarah W." />
+            <div>
+              <h4 class="body-lg-semibold">Sarah W.</h4>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text body-lg">
+            "HopeBloom gave me the confidence to take care of my mental health.
+            The support felt personal, kind, and easy to understand."
+          </p>
+
+          <div class="testimonial-user">
+            <img src={profile2.src} alt="Michael T." />
+            <div>
+              <h4 class="body-lg-semibold">Michael T.</h4>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text body-lg">
+            "The care and guidance I received helped me feel calm and supported.
+            It truly made a positive difference in my daily life."
+          </p>
+
+          <div class="testimonial-user">
+            <img src={profile1.src} alt="Sarah W." />
+            <div>
+              <h4 class="body-lg-semibold">Sarah W.</h4>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text body-lg">
+            "The resources were simple, helpful, and encouraging. HopeBloom made
+            me feel seen and supported throughout my journey."
+          </p>
+
+          <div class="testimonial-user">
+            <img src={profile2.src} alt="Michael T." />
+            <div>
+              <h4 class="body-lg-semibold">Michael T.</h4>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="testimonial-nav">
+      <button class="testimonial-btn" id="prevTestimonial" type="button" aria-label="Previous testimonial">
+        ←
+      </button>
+
+      <div class="testimonial-dots" id="testimonialDots">
+        <button class="dot is-active" type="button" aria-label="Slide 1"></button>
+        <button class="dot" type="button" aria-label="Slide 2"></button>
+        <button class="dot" type="button" aria-label="Slide 3"></button>
+        <button class="dot" type="button" aria-label="Slide 4"></button>
+      </div>
+
+      <button class="testimonial-btn" id="nextTestimonial" type="button" aria-label="Next testimonial">
+        →
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById("testimonialTrack");
+  const next = document.getElementById("nextTestimonial");
+  const prev = document.getElementById("prevTestimonial");
+  const dots = document.querySelectorAll(".dot");
+
+  if (track && next && prev) {
+    const originalCards = Array.from(track.children);
+    const totalSlides = originalCards.length;
+
+    const firstClone = originalCards[0].cloneNode(true);
+    const lastClone = originalCards[totalSlides - 1].cloneNode(true);
+
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, track.firstChild);
+
+    let index = 1;
+    let isMoving = false;
+    let autoplay;
+
+    const getGap = () => {
+      const styles = window.getComputedStyle(track);
+      return parseFloat(styles.columnGap || styles.gap || "0");
+    };
+
+    const getCardWidth = () => {
+      const card = track.querySelector(".testimonial-card");
+      return card ? card.getBoundingClientRect().width + getGap() : 0;
+    };
+
+    const setPosition = (withTransition = true) => {
+      track.style.transition = withTransition ? "transform 0.55s ease" : "none";
+      track.style.transform = `translateX(-${index * getCardWidth()}px)`;
+    };
+
+    const setActiveDot = () => {
+      let activeIndex = index - 1;
+
+      if (activeIndex >= totalSlides) activeIndex = 0;
+      if (activeIndex < 0) activeIndex = totalSlides - 1;
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === activeIndex);
+      });
+    };
+
+    const moveNext = () => {
+      if (isMoving) return;
+      isMoving = true;
+      index++;
+      setPosition(true);
+      setActiveDot();
+    };
+
+    const movePrev = () => {
+      if (isMoving) return;
+      isMoving = true;
+      index--;
+      setPosition(true);
+      setActiveDot();
+    };
+
+    next.addEventListener("click", moveNext);
+    prev.addEventListener("click", movePrev);
+
+    track.addEventListener("transitionend", () => {
+      if (index === totalSlides + 1) {
+        index = 1;
+        setPosition(false);
+      }
+
+      if (index === 0) {
+        index = totalSlides;
+        setPosition(false);
+      }
+
+      setActiveDot();
+      isMoving = false;
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        if (isMoving) return;
+        isMoving = true;
+        index = i + 1;
+        setPosition(true);
+        setActiveDot();
+      });
+    });
+
+  
+    window.addEventListener("resize", () => {
+      setPosition(false);
+    });
+
+    setPosition(false);
+  }
+</script>

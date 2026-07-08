@@ -1,0 +1,14 @@
+.ser-section1{
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.ser-section1 .ser-section1-main{
+    padding: 80px 378px;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    text-align: center;
+    background-color: var(--color-primary-soft);
+    border-radius: 32px;
+}

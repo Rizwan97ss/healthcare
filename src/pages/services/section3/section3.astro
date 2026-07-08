@@ -1,0 +1,108 @@
+---
+import "./section3.css";
+
+import sersec1 from "../../../assets/images/sersec31.png";
+import sersec2 from "../../../assets/images/sersec32.png";
+import sersec3 from "../../../assets/images/sersec33.png";
+import sersec4 from "../../../assets/images/sersec34.png";
+import sersec5 from "../../../assets/images/sersec35.png";
+import sersec6 from "../../../assets/images/sersec36.png";
+import sersec7 from "../../../assets/images/sersec37.png";
+import sersec8 from "../../../assets/images/sersec38.png";
+
+const cards = [
+  {
+    title: "Managing Anxiety",
+    slug: "managing-anxiety",
+    text: "Our goal is to equip you with practical tools to reduce stress, regain control, and improve your overall well-being. You are not alone.",
+    tags: ["Obsessive", "Phobias", "Separation"],
+    image: sersec1,
+    layout: "wide image-left",
+  },
+  {
+    title: "Coping with Stress",
+    slug: "coping-with-stress",
+    text: "Different types of coping mechanisms help individuals handle stress in unique ways, promoting mental and emotional well-being.",
+    tags: ["Avoidance", "Mindfulness", "Behavioral"],
+    image: sersec2,
+    layout: "vertical text-top",
+  },
+  {
+    title: "Building Resilience",
+    slug: "building-resilience",
+    text: "Our goal is to equip you with practical tools to reduce stress, regain control, and improve your overall well-being. You are not alone.",
+    tags: ["Emotional Regulation", "Self-Awareness", "Adaptability"],
+    image: sersec3,
+    layout: "vertical image-top",
+  },
+  {
+    title: "Depression",
+    slug: "depression",
+    text: "It's a complex mental health condition that affects how you think, feel, and act, and can have a profound impact on every aspect of your life.",
+    tags: ["Bipolar Disorder", "Dysphoric", "Psychotic"],
+    image: sersec4,
+    layout: "wide image-right",
+  },
+  {
+    title: "Personality Disorder",
+    slug: "personality-disorder",
+    text: "These disorders usually develop in adolescence or early adulthood and affect how individuals perceive themselves and others.",
+    tags: ["Borderline", "Narcissistic", "Antisocial"],
+    image: sersec5,
+    layout: "feature",
+  },
+  {
+    title: "Eating Disorder",
+    slug: "eating-disorder",
+    text: "Eating disorders are serious mental health conditions by unhealthy eating habits, distorted body image.",
+    tags: ["Anorexia Nervosa", "Bulimia Nervosa", "Binge Eating"],
+    image: sersec6,
+    layout: "vertical text-top",
+  },
+  {
+    title: "Relationship Difficulties",
+    slug: "relationship-difficulties",
+    text: "Addressing these difficulties with healthy communication, mutual respect, and emotional awareness can help strengthen.",
+    tags: ["Behavior", "Disrespectful", "Mismatched"],
+    image: sersec7,
+    layout: "vertical image-top",
+  },
+  {
+    title: "Grief & Loss",
+    slug: "grief-loss",
+    text: "The journey through grief is unique to each person, and healing takes time, support, and self-compassion.",
+    tags: ["Cry and Express", "Self-Compassion", "Grieving"],
+    image: sersec8,
+    layout: "wide image-right",
+  },
+];
+---
+
+<section class="ser-section3">
+  <h2 class="hd2">Comprehensive Care, Personalised For You</h2>
+
+  <div class="care-grid">
+    {
+      cards.map((card) => (
+        <article class={`care-card ${card.layout}`}>
+          <div class="care-content">
+            <div class="care-tags">
+              {card.tags.map((tag) => (
+                <span>{tag}</span>
+              ))}
+            </div>
+            <h3 class="h4">{card.title}</h3>
+            <p class="body-sm">{card.text}</p>
+            <a href={`/services/${card.slug}`} class="care-btn button-md">
+              Read More
+            </a>{" "}
+          </div>
+
+          <div class="care-image">
+            <img src={card.image.src} alt={card.title} />
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

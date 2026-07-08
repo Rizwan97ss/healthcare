@@ -1,0 +1,55 @@
+.ser-section6{
+    padding: 80px 135px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 126px;
+}
+.ser-section6 .left{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 32px;
+}
+.ser-section6 .left .heading{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+.ser-section6 .left .form{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 24px;
+}
+.ser-section6 .left .form input{
+    padding: 16px;
+    border-radius: 50px;
+    border: 1px solid var(--gray-500);
+    color: var(--gray-200);
+     font-family: var(--body-font);
+     outline: none;
+}
+.ser-section6 .left .form textarea{
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-500);
+    color: var(--gray-200);
+     font-family: var(--body-font);
+
+  resize: none;      /* Prevent resizing */
+  overflow-y: auto;  /* Show scrollbar if content exceeds height */
+  outline: none;
+}
+.ser-section6 .left .form input::placeholder,
+.ser-section6  .left .form textarea::placeholder {
+  color: var(--gray-200);
+}
+.ser-section6 .left .button button{
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: none;
+    color: var(--gray-800);
+    background-color: var(--gray-100);
+}
+.ser-section6 .left .button button:hover{
+    color: var(--gray-100);
+    background-color: var(--color-primary);
+}

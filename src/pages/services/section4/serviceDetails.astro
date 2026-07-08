@@ -1,0 +1,144 @@
+---
+import "./serviceDetails.css";
+
+import heroImage from "../../../assets/images/serdet1.png";
+import bottomImage from "../../../assets/images/serdetImage.png";
+import bottomBg from "../../../assets/images/serdetBg.png";
+
+import icon1 from "../../../assets/images/serdetlungs1.png";
+import icon2 from "../../../assets/images/serdetpeace-of-mind1.png";
+import icon3 from "../../../assets/images/serdetsun1.png";
+import icon4 from "../../../assets/images/serdetjuggling1.png";
+import icon5 from "../../../assets/images/serdetsettings1.png";
+import icon6 from "../../../assets/images/serdetself-care1.png";
+
+const { service } = Astro.props;
+
+const strategies = [
+    {
+        icon: icon1,
+        title: "Breathing Exercises",
+        text: "Simple techniques like deep breathing and mindfulness can help calm.",
+    },
+    {
+        icon: icon2,
+        title: "Cognitive Behavioral Therapy",
+        text: "A structured approach that helps you challenge negative thoughts.",
+    },
+    {
+        icon: icon3,
+        title: "Mindfulness and Meditation",
+        text: "Practices that allow you to focus on the present moment, reducing anxious.",
+    },
+    {
+        icon: icon4,
+        title: "Physical Activity",
+        text: "Regular exercise releases endorphins, which are natural mood lifters.",
+    },
+    {
+        icon: icon5,
+        title: "Establishing Routines",
+        text: "Creating a predictable daily routine can help reduce feelings of uncertainty.",
+    },
+    {
+        icon: icon6,
+        title: "Self-Care",
+        text: "Ensuring adequate sleep, eating a balanced diet, and relaxation.",
+    },
+];
+---
+
+<section class="serviceDetails">
+    <div class="serviceDetails-header">
+        <h1 class="h2">{service.title}</h1>
+        <p class="body-md">{service.subtitle}</p>
+    </div>
+
+    <div class="serviceDetails-main">
+        <div class="detail-hero">
+            <img src={heroImage.src} alt={service.title} />
+        </div>
+
+        <div class="detail-intro">
+            <div class="detail-tags body-md">
+                {service.tags.map((tag: string) => <span>{tag}</span>)}
+            </div>
+
+            <h2 class="h4">{service.heading}</h2>
+
+            <div class="intro-grid">
+                <div class="left">
+                    <p class="body-md">
+                        Anxiety can feel overwhelming, but with the right
+                        strategies and support, you can take control and find
+                        peace.
+                    </p>
+
+                    <p class="body-md">
+                        Anxiety can feel overwhelming, but with the right
+                        strategies and support, you can take control and find
+                        peace. Managing anxiety involves understanding its
+                        causes, learning coping techniques, and building a
+                        routine that helps you regain balance.
+                    </p>
+                </div>
+
+                <div class="right">
+                    <p class="body-md">
+                        Our goal is to equip you with practical tools to reduce
+                        stress, regain control, and improve your overall
+                        well-being. You are not alone. Managing anxiety involves
+                        understanding its causes, learning coping techniques,
+                        and building a routine that helps you regain balance.
+                        Whether you experience occasional anxiety or face more
+                        persistent symptoms, effective management.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-divider"></div>
+
+        <div class="strategies">
+            <h2 class="h4">Key Strategies for {service.title}</h2>
+
+            <div class="strategy-grid">
+                {
+                    strategies.map((item) => (
+                        <div class="strategy-card">
+                            <img src={item.icon.src} alt={item.title} />
+                            <h3 class="h6">{item.title}</h3>
+                            <p class="body-md">{item.text}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div class="support-row">
+            <div class="support-image">
+                <img src={bottomImage.src} alt="Support" />
+            </div>
+
+            <div
+                class="support-card"
+                style={`background-image: url(${bottomBg.src});`}
+            >
+            <div class="text">
+                  <h3 class="h6">Need Support? We’re Here to Help!</h3>
+
+                <p class="body-md">
+                    If you need personalized guidance, our experienced mental
+                    health professionals are here to assist you. Reach out today
+                    and take the first step toward managing anxiety effectively.
+                </p>
+            </div>
+            <div class="button">
+                 <a href="/contact" class="support-btn button-lg">
+                    Contact Us
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
